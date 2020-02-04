@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MeetingBuddy.Views.Counter"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="styles.css" />
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Visual="Material">
+            <Label
+                x:Name="CounterLabel"
+                FontFamily="ComicSans"
+                HorizontalOptions="Center"
+                Text="0" />
+
+            <Frame
+                Padding="0"
+                CornerRadius="150"
+                HeightRequest="300"
+                HorizontalOptions="Center"
+                IsClippedToBounds="True"
+                WidthRequest="300">
+                <Button
+                    BackgroundColor="Indigo"
+                    Clicked="IncrementCounterClicked"
+                    Text="Increment!" />
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
